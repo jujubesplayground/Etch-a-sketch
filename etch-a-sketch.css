@@ -1,0 +1,34 @@
+#mainContainer{
+    height: 100vh;
+    background-color: grey;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+#drawingBoard{
+    background-color: white;
+    border-style: solid;
+    border-color: olive;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+}
+
+.drawingSquare{
+    border-color: orange;
+    border-style: solid;
+    width: 24%;
+    height:24%;
+
+
+}
+

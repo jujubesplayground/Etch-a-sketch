@@ -1,6 +1,9 @@
 function createDrawingBoard(width, height)
 {
+    width = 16
+    height = 16
     const drawingBoard = document.querySelector("#drawingBoard")
+    drawingBoard.innerHTML = "";
     let i = 0;
     let j = 0;
     let tile;
@@ -28,10 +31,21 @@ function createDrawingBoard(width, height)
 }
 
 
+function createResetButton()
+{
+    const mainContainer = document.querySelector("#mainContainer")
+    let resetButton = document.createElement("div")
+    resetButton.textContent = "RESET"
+    resetButton.className = "resetButton"
+    resetButton.addEventListener('click', createDrawingBoard)
+    mainContainer.appendChild(resetButton)
+}
+
 function changeSquareColor()
 {
     console.log('couuuouououuououocouuuuuuuuuu')
     this.className = "changeColor"
 }
 
-createDrawingBoard(16, 16)
+createResetButton();
+createDrawingBoard(16, 16);

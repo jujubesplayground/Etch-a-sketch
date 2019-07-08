@@ -16,7 +16,7 @@ function createDrawingBoard(width, height)
             console.log("j " + j)
             tile = document.createElement("div")
             tile.className = "drawingSquare"
-            tile.addEventListener('click', changeSquareColor)
+            tile.addEventListener('mouseover', changeSquareColor)
             drawingBoard.appendChild(tile)
             j++;   
         }

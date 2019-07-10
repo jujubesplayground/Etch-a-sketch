@@ -1,22 +1,19 @@
 #mainContainer{
     height: 100vh;
-    background-color: olive;
     text-align: center;
     display: flex;
+    flex-basis: 100%;
+    flex: 1;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    
-
 }
 
 #drawingBoard{
     background-color: white;
-    border-style: solid;
-    border-color: olive;
-    border-width: 1px; 
-    width: 498px;
-    height: 498px;
+    border-style: none;
+    width: 500px;
+    height: 500px;
     display: flex;
     /*align-items: center;
     flex-direction: row;*/
@@ -26,7 +23,7 @@
 }
 
 .drawingSquare{
-    border-color: olive;
+    border-color: black;
     border-style: solid;
     border-width : 1px;
     flex-basis: 5.8%;
@@ -34,14 +31,23 @@
     margin: 0%;
 }
 
+#title{
+    width: 498px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
 .resetButton{
-    background-color : orange;
+    background-color : black;
     color: white;
+    width: 498px;
+    height: 40px;
+    margin-top: 2%;
 }
 
 .changeColor{
-    background-color: orange;
-    border-color: orange;
+    background-color: black;
+    border-color: black;
     border-style: solid;
     border-width : 1px;
     flex-basis: 5.8%;

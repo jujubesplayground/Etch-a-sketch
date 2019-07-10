@@ -13,10 +13,10 @@ function createDrawingBoard(width, height)
     while (i < height)
     {
         j = 0;
-        console.log("i " + i)
+        //console.log("i " + i)
         while (j < width)
         {
-            console.log("j " + j)
+            //console.log("j " + j)
             tile = document.createElement("div")
             tile.className = "drawingSquare"
             tile.addEventListener('mouseover', changeSquareColor)
@@ -34,11 +34,29 @@ function createDrawingBoard(width, height)
 function createResetButton()
 {
     const mainContainer = document.querySelector("#mainContainer")
+    console.log("main container")
+    console.log(mainContainer)
     let resetButton = document.createElement("div")
-    resetButton.textContent = "RESET"
+    resetButton.textContent = "Change grid size"
     resetButton.className = "resetButton"
-    resetButton.addEventListener('click', createDrawingBoard)
+    resetButton.addEventListener('click', changeGridSize)
     mainContainer.appendChild(resetButton)
+}
+
+
+function changeGridSize()
+{
+    const container = document.querySelector(".resetButton")
+    console.log("container " +container);
+    console.log(container)
+    container.innerHTML = ""
+    let form = document.createElement("form")
+    form.className = "resetButton"
+    form.name = "Grid Size"
+    form.type = "number"
+    form.value = "16";
+    container.appendChild(form)
+    createDrawingBoard()
 }
 
 function changeSquareColor()

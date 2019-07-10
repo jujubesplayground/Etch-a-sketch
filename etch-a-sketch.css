@@ -43,6 +43,9 @@
     width: 498px;
     height: 40px;
     margin-top: 2%;
+    line-height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 .changeColor{
